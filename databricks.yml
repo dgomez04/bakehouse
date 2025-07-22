@@ -1,0 +1,32 @@
+variables: 
+  warehouse_id: 
+    description: Define the warehouse_id for the dashboards.
+    default: 66927badd3ae7d94
+
+bundle: 
+  name: bakehouse
+
+include: 
+    - resources/*.yml
+
+sync:
+  exclude:
+    - src/*.lvdash.json
+
+targets:
+
+  dev: 
+    mode: development
+    default: true
+    workspace: 
+      host: https://adb-1741207525789986.6.azuredatabricks.net
+
+  prod: 
+    mode: production
+
+    workspace: 
+      host: https://adb-1741207525789986.6.azuredatabricks.net/explore/data?o=1741207525789986
+      root_path: /Users/diego.gomez@databricks.com/.bundle/${bundle.name}/${bundle.target}
+
+    run_as: 
+      user_name: diego.gomez@databricks.com

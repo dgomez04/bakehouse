@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    bakehouse_dlt:
+      name: ${bundle.environment}_bakehouse_dlt
+      libraries:
+        - notebook:
+            path: ../src/bakehouse_dlt.ipynb
+      serverless: true
+      development: false
+      catalog: dev
+      target: bakehouse_${bundle.environment}

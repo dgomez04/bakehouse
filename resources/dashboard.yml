@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    bakehouse_dashboard:
+      display_name: "${bundle.environment} Bakehouse Dashboard"
+      file_path: ../src/bakehouse_dashboard_${bundle.environment}.lvdash.json
+      warehouse_id: ${var.warehouse_id}

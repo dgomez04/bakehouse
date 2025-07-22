@@ -4,7 +4,7 @@
       "name": "1375151d",
       "displayName": "results",
       "queryLines": [
-        "SELECT * FROM dev.bakehouse_active.flagship_locations"
+        "SELECT * FROM dev.bakehouse_prod.flagship_locations"
       ]
     },
     {
